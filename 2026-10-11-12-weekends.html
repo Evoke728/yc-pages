@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X8R1V9WXX3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X8R1V9WXX3', { content_group: 'YC' });
+</script>
+<title>12 個週末行動指令｜YC</title>
+<meta name="description" content="今年剩 12 個週末，一個週末往目標走一步就好，一段指令貼進你常用的 AI，回答 5 題，它會照你的目標排好這 12 週要做的事">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0d10;--card:#15171c;--card2:#1b1e25;--line:rgba(255,255,255,.09);--tx:#ecedf0;--dim:#9a9ea8;--faint:#6b6f78;--ac:#ff4034;--ac2:#ff7a70;--r:16px;--mono:"JetBrains Mono",monospace;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Noto Sans TC",-apple-system,sans-serif;background:var(--bg);color:var(--tx);line-height:1.8;overflow-x:hidden;
+background-image:radial-gradient(120% 45% at 50% 0%,rgba(255,64,52,.13),rgba(255,64,52,0) 60%)}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 80px}
+a{color:var(--ac2)}
+.hero{padding:72px 0 30px}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--ac2)}
+h1{font-size:clamp(34px,8.5vw,52px);font-weight:900;line-height:1.25;margin:14px 0 12px}
+h1 .g{color:var(--ac)}
+.sub{font-size:17.5px;color:var(--dim)}
+.bar{margin-top:30px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
+.bar .lbl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.08em}
+.bar .trk{position:relative;height:6px;border-radius:6px;background:#262932;margin:10px 0 8px}
+.bar .fill{position:absolute;inset:0 auto 0 0;border-radius:6px;background:#d8dbe2}
+.bar .dot{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:var(--ac);transform:translate(-50%,-50%);box-shadow:0 0 14px rgba(255,64,52,.8)}
+.bar .nums{display:flex;gap:24px;flex-wrap:wrap;margin-top:6px}
+.bar .n{font-family:var(--mono);font-size:26px;font-weight:700}
+.bar .l{font-size:12.5px;color:var(--faint)}
+.sec{margin-top:56px}
+.tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:var(--faint)}
+h2{font-size:25px;font-weight:900;line-height:1.4;margin:8px 0 16px}
+p{margin-bottom:12px;color:#d4d6dc}
+.steps{counter-reset:s;display:grid;gap:12px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.step h3{font-size:16.5px;margin-bottom:4px}
+.step h3::before{counter-increment:s;content:counter(s);display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--ac);color:#fff;font-size:13px;align-items:center;justify-content:center;margin-right:10px;vertical-align:2px}
+.step p{font-size:14.5px;color:var(--dim);margin:0}
+.promptbox{background:var(--card);border:1px solid rgba(255,64,52,.35);border-radius:var(--r);padding:16px}
+.btn{display:block;width:100%;border:0;cursor:pointer;background:var(--ac);color:#fff;font-weight:900;font-size:17px;padding:15px 18px;border-radius:999px;font-family:inherit;box-shadow:0 6px 24px rgba(255,64,52,.35)}
+.btn:active{transform:scale(.98)}
+pre.blk{background:#0a0b0e;border:1px solid var(--line);border-radius:12px;padding:14px;font-family:var(--mono);font-size:12px;line-height:1.75;color:#c8ccd6;white-space:pre-wrap;max-height:240px;overflow:auto;margin-top:12px}
+.hint{font-size:13px;color:var(--faint);margin-top:10px;text-align:center}
+.phases{display:grid;gap:10px}
+.phase{display:grid;grid-template-columns:76px 1fr;gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.phase .wk{font-family:var(--mono);font-size:12.5px;color:var(--faint)}
+.phase .nm{font-size:18px;font-weight:900}
+.phase p{font-size:14.5px;color:var(--dim);margin:2px 0 0}
+.phase.first{border-color:rgba(255,64,52,.45)}
+.phase.first .nm{color:var(--ac)}
+.goal{background:var(--card2);border-left:3px solid var(--ac);border-radius:10px;padding:12px 14px;font-size:15px;margin-bottom:14px}
+.goal b{color:var(--tx)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--faint);font-weight:500;background:#121418}
+td.w{font-family:var(--mono);color:var(--faint)}
+td.done{color:var(--dim)}
+.ph{display:inline-block;font-size:11.5px;padding:0 7px;border-radius:999px;border:1px solid var(--line);color:var(--dim);white-space:nowrap}
+.ph-開始{border-color:var(--ac);color:var(--ac2)}
+.cta{margin-top:56px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 20px;text-align:center}
+.cta p{color:var(--dim);font-size:15px}
+.cta a.btn{text-decoration:none;margin-top:8px}
+.foot{margin-top:40px;text-align:center;font-size:12.5px;color:var(--faint)}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:#fff;color:#111;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;opacity:0;transition:.2s;pointer-events:none;z-index:9}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="kicker">12 WEEKENDS LEFT</div>
+  <h1>今年剩 <span class="g" id="wk2">12</span> 個週末<br>一個週末走一步就好</h1>
+  <p class="sub">AI 新工具每週都在出，不用全部追<br>複製下面這段指令，貼進你常用的 AI，回答 5 題，它會照你自己的目標，排好這 12 週要做的事</p>
+  <div class="bar" id="bar">
+    <div class="lbl"><span id="yr">2026</span><span id="doy"></span></div>
+    <div class="trk"><div class="fill" id="fill"></div><div class="dot" id="dot"></div></div>
+    <div class="nums">
+      <div><div class="n" id="days">—</div><div class="l">今年還剩幾天</div></div>
+      <div><div class="n" id="wkends">—</div><div class="l">還剩幾個週末</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="tag">HOW TO USE</div>
+  <h2>三步驟，5 分鐘排好你的 12 週</h2>
+  <div class="steps">
+    <div class="step"><h3>按下面的按鈕複製指令</h3><p>整段都會複製好，不用自己選</p></div>
+    <div class="step"><h3>貼進你常用的 AI</h3><p>ChatGPT、Gemini、Claude 都可以，開一個新對話貼上送出</p></div>
+    <div class="step"><h3>回答 5 個問題</h3><p>每題都有例子，回答幾個字就行，答完就拿到你自己的 12 週行程，第 1 週今天就能做</p></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="tag">THE PROMPT</div>
+  <h2>12 個週末行動指令</h2>
+  <div class="promptbox">
+    <button class="btn" data-copy-id="prompt">複製指令</button>
+    <pre class="blk" id="prompt">你現在是我的「12 個週末行動教練」
+
+我相信一件事：只要開始做，事情就會往好的方向走
+一個週末只做一件事，每週做出一個看得到的成果，進度會自己累積，12 週後就會走到目標前面
+
+請照下面三個步驟帶我
+
+【步驟一：5 分鐘對答】
+一次只問我一題，等我回答再問下一題，總共 5 題
+每題附一個例子，讓我知道可以怎麼答，我回答很短也沒關係，不要追問細節
+
+1. 今年結束前，你最想完成的一件事是什麼（例：接到第一個設計案、存到 5 萬、多益考到 750、把作品集做出來）
+2. 這件事你現在做到哪裡了，從零開始也可以（例：只有想法、做過一點又停了、已經做一半）
+3. 一個週末你大概拿得出幾小時（例：2 小時、半天）
+4. 你平常用哪個 AI，用來做過什麼（例：ChatGPT，用來查資料、改文章）
+5. 以前做這種事，通常是什麼讓你停下來（例：沒時間、不知道從哪開始、做一做就沒動力）
+
+【步驟二：用五段框架排 12 週】
+問完 5 題，照這個框架幫我排行程
+
+- 第 1 週｜開始：一件今天 30 分鐘內就能做完的事，做完就算開始了
+- 第 2–4 週｜打底：把目標拆小，用 AI 補上我缺的知識或工具，做出第一個粗糙版本
+- 第 5–9 週｜推進：每週往目標前進一步，每週都要留下一個成果
+- 第 10–11 週｜對外：讓真的人看到、試用或給意見，拿到第一次真實回饋
+- 第 12 週｜收尾：檢查成果，把這 12 週好用的做法整理下來，決定明年的下一步
+
+排的時候要遵守：
+- 每週只有一件主任務，花的時間不能超過我週末拿得出的時數
+- 每週都要寫出「完成的樣子」，要具體到看得見，例如「一份 10 項的報價清單」，不能寫「研究一下」「了解一下」這種做完也不知道算不算完成的任務
+- 每週附一段我可以直接複製去問 AI 的指令，讓我知道這週 AI 要怎麼幫我
+- 用我平常在用的 AI 就好，除非真的必要，不要叫我去下載新工具
+- 針對我第 5 題說的卡關原因，在行程裡放一個對策，並且明確告訴我放在哪一週、怎麼防
+
+【步驟三：輸出】
+1. 先用一句話重述我的目標，改寫成 12 週後「做得到、看得見」的版本
+2. 用表格列出 12 週：週次｜階段｜這週的任務｜完成的樣子｜預估時間
+3. 第 1 週拆成 3 個步驟，附上可以直接複製的 AI 指令，讓我今天就做
+4. 最後告訴我：每個週末做完，回來這個對話打「第 N 週完成」或「第 N 週卡住了，因為⋯」，你會依照我的實際進度調整下一週
+
+語氣像一個會做事的朋友，講白話、講具體，不要說教，不要喊口號，不要用驚嘆號
+現在開始問我第 1 題</pre>
+    <div class="hint">每個週末做完，回到同一個對話打「第 N 週完成」，AI 會照你的進度調整下一週</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="tag">THE FRAMEWORK</div>
+  <h2>它會照這五段幫你排</h2>
+  <p>只要開始做，事情就會往好的方向走<br>一個週末只做一件事，每週留下一個看得到的成果，進度會自己累積</p>
+  <div class="phases">
+    <div class="phase first"><div class="wk">第 1 週</div><div><div class="nm">開始</div><p>一件今天 30 分鐘內做得完的事，做完就算開始了</p></div></div>
+    <div class="phase"><div class="wk">第 2–4 週</div><div><div class="nm">打底</div><p>把目標拆小，用 AI 補上缺的知識或工具，做出第一個粗糙版本</p></div></div>
+    <div class="phase"><div class="wk">第 5–9 週</div><div><div class="nm">推進</div><p>每週往目標前進一步，每週都留下一個成果</p></div></div>
+    <div class="phase"><div class="wk">第 10–11 週</div><div><div class="nm">對外</div><p>讓真的人看到、試用或給意見，拿到第一次真實回饋</p></div></div>
+    <div class="phase"><div class="wk">第 12 週</div><div><div class="nm">收尾</div><p>檢查成果，把好用的做法整理下來，決定明年的下一步</p></div></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="tag">EXAMPLE</div>
+  <h2>舉例：想接第一個插畫案的人</h2>
+  <p>回答：IG 上有作品但沒接過案、一個週末 3 小時、平常用 ChatGPT、卡在不知道怎麼開價又怕被拒絕<br>AI 排出來的 12 週長這樣</p>
+  <div class="goal"><b>12 週後：</b>手上有報價單和作品集，已經對 20 位潛在客戶發出詢問，至少拿到一次真實回覆</div>
+  <div class="tbl"><table>
+    <thead><tr><th>週</th><th>階段</th><th>這週的任務</th><th>完成的樣子</th></tr></thead>
+    <tbody><tr><td class="w">1</td><td><span class="ph ph-開始">開始</span></td><td>挑 3 張代表作，請 AI 寫出你的畫風描述</td><td class="done">手機備忘錄裡有 3 張圖的連結和 3 句畫風描述</td></tr><tr><td class="w">2</td><td><span class="ph ph-打底">打底</span></td><td>從 IG 的圖歸納能接的案子類型，選一種主打</td><td class="done">一張寫著「我接 ○○，給 ○○ 的人」的便條</td></tr><tr><td class="w">3</td><td><span class="ph ph-打底">打底</span></td><td>找 10 筆同類插畫案的公開報價，請 AI 整理</td><td class="done">一份 10 項的行情表</td></tr><tr><td class="w">4</td><td><span class="ph ph-打底">打底</span></td><td>做出報價單第一版，分三個方案</td><td class="done">一頁報價單，每個方案都有價格、修改次數、交件天數</td></tr><tr><td class="w">5</td><td><span class="ph ph-推進">推進</span></td><td>把 6 張作品整理成作品集</td><td class="done">一組 6 張作品，每張附一句說明</td></tr><tr><td class="w">6</td><td><span class="ph ph-推進">推進</span></td><td>預先寫好被拒絕時的回覆</td><td class="done">一張話術卡：嫌貴、砍價、已讀不回各一句</td></tr><tr><td class="w">7</td><td><span class="ph ph-推進">推進</span></td><td>自己出一個模擬案子，畫一張並計時</td><td class="done">1 張完稿＋實際花了幾小時</td></tr><tr><td class="w">8</td><td><span class="ph ph-推進">推進</span></td><td>改 IG 簡介，發一則接案公告</td><td class="done">簡介寫明接什麼案，置頂公告已發出</td></tr><tr><td class="w">9</td><td><span class="ph ph-推進">推進</span></td><td>列出 20 位可能的客戶，寫好私訊草稿</td><td class="done">20 人名單＋5 則私訊草稿</td></tr><tr><td class="w">10</td><td><span class="ph ph-對外">對外</span></td><td>寄出 10 則私訊，記錄結果</td><td class="done">10 則已發出，有一張回覆紀錄表</td></tr><tr><td class="w">11</td><td><span class="ph ph-對外">對外</span></td><td>跟進有回覆的人，再發 10 則</td><td class="done">回覆紀錄表至少 3 筆真實回饋</td></tr><tr><td class="w">12</td><td><span class="ph ph-收尾">收尾</span></td><td>整理這 12 週好用的做法，決定明年下一步</td><td class="done">一頁「我的接案做法」＋明年最想做的 3 件事</td></tr></tbody>
+  </table></div>
+  <p style="margin-top:12px;font-size:14px;color:var(--dim)">開價的問題放在第 3、4 週處理，怕被拒絕的部分在第 6 週先寫好話術，第 10 週的目標只算「寄出 10 則」，被拒絕也算完成</p>
+</section>
+
+<div class="cta">
+  <p>每個週末，我也在做同一件事<br>追蹤我，看我怎麼用 AI 一步一步把事情做完</p>
+  <a class="btn" href="https://www.instagram.com/yungchian.md/" target="_blank" rel="noopener">追蹤 @yungchian.md</a>
+</div>
+<div class="foot">YC｜AI 排出來的行程會依你的回答和使用的 AI 而不同</div>
+</div>
+<div class="toast" id="toast">已複製，貼進你的 AI 吧</div>
+<script>
+const toast=document.getElementById('toast');let tt;
+function copied(){toast.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove('show'),1600);
+ if(window.gtag)gtag('event','copy_prompt',{content_group:'YC'});}
+function fallback(text){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();try{document.execCommand('copy');copied();}catch(e){}t.remove();}
+function doCopy(text){if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(copied,()=>fallback(text));}else fallback(text);}
+document.addEventListener('click',ev=>{const b=ev.target.closest('[data-copy-id]');if(!b)return;doCopy(document.getElementById(b.dataset.copyId).textContent);});
+// 年度進度：照看頁面的當天即時算
+(function(){const now=new Date();const y=now.getFullYear();const s=new Date(y,0,1),e=new Date(y,11,31);
+ const day=864e5;const doy=Math.floor((new Date(y,now.getMonth(),now.getDate())-s)/day)+1;const total=Math.round((e-s)/day)+1;
+ const left=total-doy+1;let wk=new Set();for(let i=0;i<left;i++){const d=new Date(y,now.getMonth(),now.getDate()+i);const g=d.getDay();if(g===0||g===6){const mon=new Date(d);mon.setDate(d.getDate()-((g+6)%7));wk.add(mon.toDateString());}}
+ const pct=(doy-1)/(total-1)*100;
+ document.getElementById('yr').textContent=y;document.getElementById('doy').textContent=doy+'/'+total;
+ document.getElementById('fill').style.width=pct+'%';document.getElementById('dot').style.left=pct+'%';
+ document.getElementById('days').textContent=left;document.getElementById('wkends').textContent=wk.size;document.getElementById('wk2').textContent=wk.size;})();
+</script>
+</body>
+</html>
